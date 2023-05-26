@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <title>Calculadora de Sueldo</title>
+  <style>
+    body{
+      background-color: rgb(148, 121, 121);
+    }
+#todo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 50vh;
+  background-color: rgb(36, 175, 175);
+}
+    label{
+      display:flex;
+      flex-direction: row;
+      font-family:Georgia, 'Times New Roman', Times, serif;
+      color: white;
+      background-color: black;
+      width:fit-content;
+      margin-bottom: 0.2em;
+      border-radius: 5%;
+    }
+    input{
+      background-color: rgb(216, 213, 213);
+      color: black;
+      font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+      border-radius: 10%;
+      display: flex;
+      flex-direction: column;
+    }
+    h1{
+      background-color: black;
+      color: white;
+      width:max-content;
+    }
+    p{
+      font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+      color: green;
+      background-color: rgb(170, 162, 162);
+      width: max-content;
+    }
+    button{
+      font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: large;
+    margin-top: 1em;
+    background-color: black;
+    color: white;
+    border-radius: 5%;
+    }
+    #caja1{
+      height: 100%;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+     #caja2{
+      height: 100%;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  </style>
+</head>
+<body>
+  <div id="todo">
+  <h1>Calculadora de Sueldo</h1>
+<div id="caja1">
+  <label for="valorAutoActual">Valor del Auto Actual:</label>
+  <input type="number" id="valorAutoActual">
+
+  <label for="ventasDebito">Ventas con Débito:</label>
+  <input type="number" id="ventasDebito">
+</div>
+<div id="caja2">
+  <label for="ventasSinDebito">Ventas sin Débito:</label>
+  <input type="number" id="ventasSinDebito">
+
+  <label for="moras">Moras:</label>
+  <input type="number" id="moras">
+</div>
+  <button onclick="calcularSueldo()">Calcular Sueldo</button>
+  </div>
+
+  <h2>Resultados:</h2>
+  <p id="sueldoSinBasico"></p>
+  <p id="sueldoTotal"></p>
+<script src="./Escalas.js"></script>
+</body>
+</html>

@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mi primera web</title>
+
+<!-- Otros elementos de encabezado -->
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick.css"/>
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick-theme.css"/>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+  h1{
+    background-color: aqua;
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    
+  }
+  h2{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    
+  }
+  ul{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    
+  }
+  .fotoAuto{
+    width: 45%;
+    display: flex;
+    flex-direction: center;
+    margin: 0%;
+  }
+header {
+  background: rgba(37, 80, 199, 0.7);
+  width: 100%;
+  position:fixed;
+  z-index: 100;
+  display: flex;
+  justify-content: center
+}
+
+nav {
+  float: left;
+}
+
+nav ul {
+  display: inline;
+  list-style: none;
+  overflow: hidden; 
+}
+
+nav ul li {
+  float: left;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+}
+nav ul li a {
+  display: block;
+  padding: 0.5em;
+  color: #000000;
+  text-decoration: none;
+}
+nav ul li:hover {
+  background: #ec2344;
+}
+
+@keyframes slideInRight {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+p.slide-in-right {
+  animation: slideInRight 1s ease-in-out;
+}
+.slide-in-right {
+  animation: slideInRight 1s ease-in-out;}
+</style>
+</head>
+
+
+<body>
+    <header>
+   <nav>
+    <ul>
+      <li><a href="index.html#Probando">Inicio</a></li>
+      <li><a targer="_blank" href="https://www.youtube.com/watch?v=MJkdaVFHrto&ab_channel=HolaMundo">Sobre nosotros</a></li>
+      <li><a href="#">Accede a tu financiacion</a></li>
+      <li><a href="#">Contacto</a></li>
+  </ul>
+</nav>
+</header>
+<br><br><br><br>
+  <h1 class="slide-in-right">Probando desarrollar una pagina web</h1>
+  <h2><strong>Que va a contener y que voy a parcticar?</strong></h2>
+ 
+
+  <ul>
+    <li>Crear una pagina web sobre Peugeot 208</li>
+    <li>Darle estilos con css para un diseño atractivo</li>
+  </ul>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+
+  <h1 class="none">Para los adelantados a su tiempo</h1>
+  <!-- <div style="display: flex; justify-content: space-around;">
+  <img id="fotoAuto" src="./Autos/1.jpg" alt="Foto del vehiculo">
+  <img id="fotoAuto" src="./Autos/2.jpg" alt="Foto 2">
+  <img id="fotoAuto" src="./Autos/3.jpg" alt="Foto 3">
+  </div>
+ -->
+ <blockquote style="display:block">  <p class="slide-in-right"  style="float: left; margin-right: 20px; display: flex;
+    justify-content: flex-end; font-family: Georgia, 'Times New Roman',
+     Times, serif; background-color:rgba(37, 80, 199, 0.7);">
+     Con su nuevo estilo tecnológico, look deportivo y <br> un adelanto al
+     futuro, el Nuevo Peugeot 208 es irresistible.
+     <br> Su diseño de proporciones exactas, genera un vehículo <br> dinámico y 
+      bien equilibrado, inspirado en el concept Fractal.</p>
+ <div class="slider">
+  <div><img class="fotoAuto" src="/Autos/1.jpg" alt="Foto del vehiculo"></div>
+  <div><img class="fotoAuto" src="/Autos/2.jpg" alt="Foto 2"></div>
+  <div><img class="fotoAuto" src="/Autos/3.jpg" alt="Foto 3"></div>
+</div>
+</blockquote>
+
+<div class="slider-nav">
+  <div class="slider-prev">Anterior</div>
+  <div class="slider-next">Siguiente</div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick.min.js"></script>
+<script>
+  $(document).ready(function(){
+    $('.slider').slick({
+      prevArrow: $('.slider-prev'), // Flecha izquierda
+      nextArrow: $('.slider-next') // Flecha derecha
+    });
+
+    $('.slider-prev').click(function(){
+      $('.slider').slick('slickPrev');
+    });
+
+    $('.slider-next').click(function(){
+      $('.slider').slick('slickNext');
+    });
+  });
+</script>
+
+<style>
+  .slider-nav {
+    justify-content: center;
+    text-align: center;
+    margin-top: 10px;
+  }
+
+  .slider-prev,
+  .slider-next {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    display: inline-block;
+    padding: 5px 10px;
+    background-color: #0f357c;
+    color: #000000;
+    cursor: pointer;
+    margin: 0 5px;
+    border-radius: 8%;
+  }
+</style>
+<br>
+<hr>
+<br>
+
+<h3 style="font-family: 'Lucida Sans', 'Lucida Sans Regular',
+ 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana,
+  sans-serif;">Ponte en contacto con nostros</h3>
+<p style="font-size:smaller; font-family: 'Lucida Sans', 'Lucida Sans Regular',
+ 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana,
+  sans-serif;">Completa los campos requeridos:</p>
+<form style="display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">
+  <label for="Nombre">Nombre completo</label>
+  <input id="Nombre" type="text" placeholder="Nombre"/> <br> 
+  <label for="Telefono">Telefono</label>
+  <input id="Telefono" type="number" placeholder="Telefono" required/> <br>
+  <label for="Email">Email</label>
+  <input id="Email" type="email" placeholder="abcd@gmail.com"/> <br>
+
+<select name="modelos" id="modelos">
+  <option value="Argentina">Peugeot 208</option>
+  <option value="Bolivia">Peugeot Partner</option>
+  <option value="Brazil">Citroen c3</option>
+</select>
+
+  <label> 
+    <p style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 
+    'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, 
+    sans-serif;">Posee vehiculo usado?</p>
+  <input type="radio" name="newsletter" value="Yes">
+  Si
+</label>
+
+<label>
+  <input type="radio" name="newsletter" value="no" required>
+  No
+</label> <br>
+  <label>
+
+  <input type="checkbox" required>
+  I accept the terms and conditions
+</label> <br>
+
+<input type="submit">
+</form>
+
+</body>
+</html>
