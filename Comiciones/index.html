@@ -2,99 +2,19 @@
 <html>
 <head>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+  
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+  
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <title>Calculadora de Sueldo</title>
-  <style>
-    body{
-      background-color: rgb(148, 121, 121);
-       }
-      @media screen and (max-width: 600px) {
-        body{
-          background-color: rgb(111, 111, 218);
-        }
-      }
-#todo {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 70vh;
-  background-color: rgb(36, 175, 175);
-  
-}
-    label{
-      display:flex;
-      flex-direction: row;
-      font-family:Georgia, 'Times New Roman', Times, serif;
-      color: white;
-      background-color: black;
-      width:fit-content;
-      margin-bottom: 0.2em;
-      border-radius: 5%;
-    }
-    input{
-      background-color: rgb(216, 213, 213);
-      color: black;
-      font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-      border-radius: 10%;
-      display: flex;
-      flex-direction: column;
-    }
-    h1{
-      background-color: black;
-      color: white;
-      width:max-content;
-    }
-    p{
-      font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-      color: green;
-      background-color: rgb(170, 162, 162);
-      width: max-content;
-    }
-    #boton{
-    font-size: large;
-      margin-top: 0.2em;
-    background-color: black;
-    color: white;
-    }
-    #caja1{
-      height: 100%;
-      margin: 0;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-     @media screen and (max-width: 600px) {
-        #caja1{
-      height: 100%;
-      margin: 0;
-      display:table-row;
-      justify-content: center;
-      align-items: center;
-        }
-      }
-     #caja2{
-      height: 100%;
-      margin: 0;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-         @media screen and (max-width: 600px) {
-        #caja2{
-      height: 100%;
-      margin: 0;
-      display:table-row;
-      justify-content: center;
-      align-items: center;
-        }
-      }
-  </style>
+  <link rel="stylesheet" href="./estilos.css">
 </head>
 <body>
   <div id="todo">
   <h1>Calculadora de Sueldo</h1>
-<div id="caja1">
+<div id="caja1" class="slide-in-left">
   <label for="valorAutoActual">Valor del Auto Actual:</label>
   <input type="number" id="valorAutoActual">
 
@@ -102,9 +22,12 @@
   <input type="number" id="ventasDebito">
 </div>
 
-<div id="caja2">
+<div id="caja2" class="slide-in-right">
   <label for="ventasSinDebito">Ventas sin Débito:</label>
   <input type="number" id="ventasSinDebito">
+  
+  <label for="pea">PEA:</label>
+  <input type="number" id="pea">
 
   <label for="moras">Moras:</label>
   <input type="number" id="moras">

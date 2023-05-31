@@ -31,21 +31,22 @@ function calculoDeSueldo(valorAutoActual, ventasDebito,ventasSinDebito, porcenta
   console.log(sueldoTotal);
 }
 calculoDeSueldo(6629400, 5, 2, porcentajeDebito, porcentajeSinDebito, 80000)
-
  */
-
     function calcularSueldo() {
-      var valorAutoActualInput = document.getElementById("valorAutoActual");
-      var valorAutoActual = parseInt(valorAutoActualInput.value);
+      let valorAutoActualInput = document.querySelector("#valorAutoActual");
+      let valorAutoActual = +valorAutoActualInput.value;
+    
+      let ventasDebitoInput = document.querySelector("#ventasDebito");
+      let ventasDebito = +ventasDebitoInput.value;
 
-      var ventasDebitoInput = document.getElementById("ventasDebito");
-      var ventasDebito = parseInt(ventasDebitoInput.value);
+      let ventasSinDebitoInput = document.querySelector("#ventasSinDebito");
+      let ventasSinDebito = +ventasSinDebitoInput.value;
 
-      var ventasSinDebitoInput = document.getElementById("ventasSinDebito");
-      var ventasSinDebito = parseInt(ventasSinDebitoInput.value);
+      let morasInput = document.querySelector("#moras");
+      let moras = +morasInput.value;
 
-      var morasInput = document.getElementById("moras");
-      var moras = parseInt(morasInput.value);
+      let peaInput = document.querySelector("#pea");
+      let pea = +peaInput.value;
 
       var porcentajeDebito;
       var porcentajeSinDebito;
@@ -68,15 +69,25 @@ calculoDeSueldo(6629400, 5, 2, porcentajeDebito, porcentajeSinDebito, 80000)
 
       var valorVentaDebito = (valorAutoActual * porcentajeDebito) / 100;
       var valorVentaSinDebito = (valorAutoActual * porcentajeSinDebito) / 100;
+      let valorPea = (valorAutoActual * 0.5) / 100;
 
       var totalDebito = valorVentaDebito * ventasDebito;
       var totalSinDebito = valorVentaSinDebito * ventasSinDebito;
-      var sueldoTotal = totalDebito + totalSinDebito - moras;
-      var sueldoSinBasico = totalDebito + totalSinDebito - (moras + 130000);
+      let totalPea = valorPea * pea;
+      var sueldoTotal = Math.floor((totalDebito + totalSinDebito + totalPea) - moras);
+      var sueldoSinBasico = Math.floor((totalDebito + totalSinDebito + totalPea) - (moras + 130000));
 
-      document.getElementById("sueldoSinBasico").textContent =
+      document.querySelector("#sueldoSinBasico").innerHTML =
       "Sueldo sin básico: $" + sueldoSinBasico;
-      document.getElementById("sueldoTotal").textContent =
-      "Sueldo total: $" + sueldoTotal;
-      console.log(sueldoSinBasico);
-    }
+      document.querySelector("#sueldoTotal").innerHTML =
+        "Sueldo total: $" + sueldoTotal;
+      
+      /* let p = document.querySelector("#sueldoSinBasico") */
+}
+    
+/* const botonClick = document.querySelector("#boton");
+botonClick.addEventListener("click", function () {
+  const p = document.querySelector("#sueldoSinBasico");
+  botonClick.style.color = "green";
+  p.style.animation = slide - left;
+    }) */
